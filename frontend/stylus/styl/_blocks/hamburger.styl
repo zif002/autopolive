@@ -1,0 +1,62 @@
+
+/* Icon 1 */
+.mob_button
+  display none
+#nav-icon1
+  width 19px
+  height 16px
+  position relative
+  margin 0 0px 0 0px
+  transform rotate(0deg)
+  transition .5s ease-in-out
+  cursor pointer
+  float right
+  
+
+
+#nav-icon1 span
+  display block
+  position absolute
+  height 2px
+  width 100%
+  background rgba(cWhite, 50%)
+  border-radius 9px
+  opacity 1
+  left 0
+  transform rotate(0deg)
+  transition .25s ease-in-out
+
+
+#nav-icon1 span:nth-child(1) 
+  top 0px
+
+
+#nav-icon1 span:nth-child(2) 
+  top 6px
+
+
+#nav-icon1 span:nth-child(3) 
+  top 12px
+
+
+#nav-icon1.open span:nth-child(1) 
+  top 18px
+  -webkit-transform rotate(135deg)
+  -moz-transform rotate(135deg)
+  -o-transform rotate(135deg)
+  transform rotate(135deg)
+
+
+#nav-icon1.open span:nth-child(2) 
+  opacity 0
+  left -60px
+
+
+#nav-icon1.open span:nth-child(3) 
+  top 18px
+  -webkit-transform rotate(-135deg)
+  -moz-transform rotate(-135deg)
+  -o-transform rotate(-135deg)
+  transform rotate(-135deg)
+
+

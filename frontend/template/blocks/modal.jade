@@ -1,0 +1,72 @@
+.overlay_modal
+	.modal.form-order
+		+b.form.form--nomarg
+			.nav__close#btn_colse--modal ЗАКРЫТЬ
+				+b.cross
+					+e.line
+					+e.line
+			form(action="").main-form
+				+e.title ЗАКАЗ ТОВАРА:
+				+e.description ОСТАВЬТЕ СВОИ ДАННЫЕ ДЛЯ СВЯЗИ, ЧТОБЫ НАШ МЕНЕДЖЕР СВЯЗАЛСЯ <br>С ВАМИ И ПРИНЯЛ ЗАКАЗ:
+				+e.item
+					+e.item-group
+						+e.input-field
+							input.rfield
+							+e('label').placeholder Имя
+							.error ошибка ввода данных
+						+e.input-field
+							input.rfield
+							+e('label').placeholder ТЕЛЕФОН
+							.error несуществующий номер
+					+e.input-field
+						button(type="submit").btn.btn_order.btn_order--modal.disabled Отправить
+	.modal.form-phone-callback
+		+b.form.form--nomarg
+			.nav__close#btn_colse--modal ЗАКРЫТЬ
+				+b.cross
+					+e.line
+					+e.line
+			form(action="").main-form
+				+e.title ЗАДАТЬ ВОПРОС:
+				+e.description ОСТАВЬТЕ СВОИ ДАННЫЕ ДЛЯ СВЯЗИ, ЧТОБЫ НАШ МЕНЕДЖЕР СВЯЗАЛСЯ 	С ВАМИ И ОТВЕТИЛ НА ВАШИ ВОПРОСЫ:
+				+e.item
+					+e.item-group
+						+e.input-field
+							input(name="name").rfield
+							+e('label').placeholder Имя
+
+						+e.input-field
+							input(name="phone").rfield
+							+e('label').placeholder ТЕЛЕФОН
+					+e.item-group
+						+e.input-field
+							input(name="email").rfield
+							+e('label').placeholder Email
+
+						+e.input-field
+							textarea(name="textarea").rfield
+							+e('label').placeholder Ваше сообщение
+
+					+e.input-field
+						button(type="submit").btn.btn_order.btn_order--modal.disabled Отправить
+	.modal.form-phone-manager
+		+b.form.form--nomarg
+			.nav__close#btn_colse--modal ЗАКРЫТЬ
+				+b.cross
+					+e.line
+					+e.line
+			form(action="").main-form
+				+e.title ЗАКАЗ ЗВОНКА:
+				+e.description ОСТАВЬТЕ СВОИ ДАННЫЕ ДЛЯ СВЯЗИ, ЧТОБЫ НАШ МЕНЕДЖЕР СВЯЗАЛСЯ С ВАМИ:
+				+e.item
+					+e.item-group
+						+e.input-field
+							input.rfield
+							+e('label').placeholder Имя
+							.error ошибка ввода данных
+						+e.input-field
+							input.rfield
+							+e('label').placeholder ТЕЛЕФОН
+							.error несуществующий номер
+					+e.input-field
+						button(type="submit").btn.btn_order.btn_order--modal.disabled Отправить

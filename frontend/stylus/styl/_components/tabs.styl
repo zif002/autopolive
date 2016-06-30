@@ -1,0 +1,54 @@
+.tabs
+  col(9/10)
+  margin-top 100px
+  margin-bottom 100px
+  &__all
+    .tab:not(:first-child)
+      display none
+  &__nav
+    padding 0
+    border-bottom 1px solid #e8e8e8
+
+  &__item
+    display inline-block
+    padding 0 43px 16px 43px
+    position: relative
+    cursor pointer
+    transition all .3s ease
+    font-size rem(10px)
+    color cBlue
+    font-family GeometriaBold
+    letter-spacing letter(340, 10)px
+    &:before
+      transition all .3s ease
+      content ''
+      position: absolute
+      width 100%
+      left 0
+      bottom -1px
+      height 3px
+      background transparent
+    &.active,&:hover
+      &:before
+        background cFuxia
+.b-description
+  padding 24px 0 10px 0
+  color #777
+  border-bottom 1px solid #e8e8e8
+  &:last-child
+    border-bottom none
+
+  ul
+    list-style none
+    margin 0
+    padding 0
+  p
+    margin 0
+.name-description
+  font-family GeometriaBold
+  font-size rem(10px)
+  letter-spacing letter(340, 10)px
+  color cBlue
+
+
+
