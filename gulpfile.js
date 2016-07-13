@@ -165,7 +165,8 @@ gulp.task('watch', function(){
 	gulp.watch('frontend/stylus/**/*.styl', gulp.series('stylus'));
 	gulp.watch('frontend/template/**/*.jade', gulp.series('jade'));
 	gulp.watch('frontend/img/sprite/*.png', gulp.series('img:sprite'));
-	gulp.watch('frontend/img/svg/*.svg', gulp.series('img:svg'));
+  gulp.watch('frontend/img/svg/*.svg', gulp.series('img:svg'));
+	gulp.watch('frontend/img/*.svg', gulp.series('svg:copy'));
 	gulp.watch('frontend/img/*.{jpg,png}', gulp.series('img:image'));
 	gulp.watch('frontend/fonts/**/*.*', gulp.series('fonts'));
 });

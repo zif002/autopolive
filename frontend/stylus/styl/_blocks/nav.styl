@@ -1,0 +1,85 @@
+.nav-fixed
+	background: white
+	position: fixed
+	top 0
+	padding 22px 43px
+	width calc(100% - 87px)
+	transition all .3s ease
+	&>div
+		display inline-block
+.search
+
+	input
+		height 25px
+		width 300px
+		border-radius 3px
+		display none
+
+.btn-search
+	border: none
+	background none
+	cursor pointer
+	outline none
+.burger
+	margin-top 10px
+	width 32px
+	cursor pointer
+	span
+		width auto
+		display block
+		height 3px
+		margin-bottom 5px
+		background black
+		transition all .3s ease
+		position relative
+		&:before
+			position absolute
+			content ''
+			background black
+			width 100%
+			display block
+			height 3px
+			transform rotate(0deg)
+			transition all .3s ease
+			transform-origin 0 0
+		&:nth-child(1)
+			margin-left 10px
+		&:nth-child(2)
+			margin-left 5px
+	&:hover
+		span
+			margin-left 0
+			&:nth-child(2)
+				opacity 0
+			&:nth-child(1),&:nth-child(3)
+				background transparent
+			&:nth-child(1)
+				&:before
+					top 0
+					transform rotate(45deg)
+			&:nth-child(3)
+				&:before
+					top 0
+					transform-origin center
+					transform rotate(-50deg)
+.icon-busket
+	cursor pointer
+	margin-left 90px
+.logo
+	position absolute
+	left 0
+	right 0
+	bottom 0
+	top 0
+	margin auto
+	width 156px
+	height 35px
+.right
+	float right
+	padding-top 6px
+	.search,.icon-busket
+		display inline-block
+.nav--scroll
+	box-shadow 0 1px 3px 
+body
+	height 800px

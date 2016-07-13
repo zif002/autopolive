@@ -1,8 +1,17 @@
-font-face( "geometriaReg", "../fonts/Geometria", normal)
+// font-face( "geometriaReg", "../fonts/Geometria", normal)
+@import "https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,cyrillic";
 
 jeet = {
-  gutter: 2.5,
+  gutter: (25/1040)*100,
   parent-first: false,
   layout-direction: LTR,
-  max-width: 1280px
+  max-width: 1040px
 }
+
+
+body
+	font: 14px 'Roboto-regular', sans-serif
+	line-height: 28px
+	background: $gray
+	color: $tgray
+	
