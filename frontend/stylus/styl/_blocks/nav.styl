@@ -2,18 +2,21 @@
 	background: white
 	position: fixed
 	top 0
+	z-index: 3
 	padding 22px 43px
 	width calc(100% - 87px)
 	transition all .3s ease
 	&>div
 		display inline-block
 .search
-
 	input
+		outline none
 		height 25px
 		width 300px
 		border-radius 3px
-		display none
+		width 0
+		border none
+		border-bottom 1px solid $gray
 
 .btn-search
 	border: none
@@ -41,30 +44,31 @@
 			height 3px
 			transform rotate(0deg)
 			transition all .3s ease
-			transform-origin 0 0
+			
 		&:nth-child(1)
 			margin-left 10px
 		&:nth-child(2)
 			margin-left 5px
-	&:hover
+
+	cursor pointer
+	margin-left 90px
+.burger-close
 		span
 			margin-left 0
 			&:nth-child(2)
 				opacity 0
 			&:nth-child(1),&:nth-child(3)
 				background transparent
+				margin-left 0
+				width 100%
 			&:nth-child(1)
 				&:before
-					top 0
-					transform rotate(45deg)
+					bottom -10px
+					transform rotate(-45deg)
 			&:nth-child(3)
 				&:before
-					top 0
-					transform-origin center
-					transform rotate(-50deg)
-.icon-busket
-	cursor pointer
-	margin-left 90px
+					top -5px
+					transform rotate(45deg)
 .logo
 	position absolute
 	left 0

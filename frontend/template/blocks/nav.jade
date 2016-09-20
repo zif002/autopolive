@@ -14,4 +14,49 @@
 				input.search-item
 		.icon-busket
 			img(src="img/shopping-bag.svg", alt="")
++b('nav').main-nav
+	+e.section-link
+		a(href="") Главная
+		a(href="") О компании
+		a(href="") Статьи
+		a(href="") Контакты
+		a(href="") Корзина
+		a(href="") Личный кабинет
 
+	+e.section-link
+		+b('ul').list-category
+			+e('li').item
+				a(href="") Категория 1
+				+e('ul').drop-down
+					+e('li').drop-down-item
+						a(href="") Подкатегория 1
+					+e('li').drop-down-item
+						a(href="") Подкатегория 2
+					+e('li').drop-down-item
+						a(href="") Подкатегория 3
+					+e('li').drop-down-item
+						a(href="") Подкатегория 4
+			+e('li').item
+				a(href="") Категория 2
+				+e('ul').drop-down
+					+e('li').drop-down-item
+						a(href="") Подкатегория 1
+					+e('li').drop-down-item
+						a(href="") Подкатегория 2
+					+e('li').drop-down-item
+						a(href="") Подкатегория 3
+					+e('li').drop-down-item
+						a(href="") Подкатегория 4
+			+e('li').item
+				a(href="") Категория 3
+				+e('ul').drop-down
+					+e('li').drop-down-item
+						a(href="") Подкатегория 1
+					+e('li').drop-down-item
+						a(href="") Подкатегория 2
+					+e('li').drop-down-item
+						a(href="") Подкатегория 3
+					+e('li').drop-down-item
+						a(href="") Подкатегория 4
+			+e('li').item
+				a(href="") Категория 4

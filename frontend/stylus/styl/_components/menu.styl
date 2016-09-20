@@ -1,0 +1,36 @@
+.main-nav
+	position fixed
+	width 40%
+	left 0
+	overflow-y auto
+	background $green
+	z-index 3
+	padding 50px 0
+	visibility hidden
+	&__section-link
+		cf()
+		padding 20px 0 0 100px
+		ul
+			padding 0
+			marign 0
+			list-style none
+		>a
+			display: block
+			color #fff
+			font-size 16px
+			text-decoration none
+			text-transform uppercase
+.list-category
+	&__item
+		a
+			display: block
+			color #fff
+			font-size 16px
+			text-decoration none
+			text-transform uppercase
+.nav-opened
+	visibility visible
+.zoom
+	transform scale(.9)
+#content-zoom
+	transition all .3s ease
