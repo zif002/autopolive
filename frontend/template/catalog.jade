@@ -6,6 +6,7 @@ html
 	body
 		include blocks/svg.jade
 		include blocks/nav.jade
+		include blocks/filter.jade
 		#content-zoom
 			section.catalog
 				.btn-filter
@@ -81,7 +82,11 @@ html
 								.btn.btn--abs
 									img(src="img/shopping-bag--btn.svg", alt="")
 									a(href="") Посмотреть товары
-
+			section.more
+				.wrapper
+					.btn
+						img(src="img/shopping-bag--btn.svg", alt="")
+						a(href="") Еще товары
 			+b.section-text-about
 				.wrapper
 					+e.logo

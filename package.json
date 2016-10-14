@@ -18,7 +18,9 @@
     "gulp-stylus": "^2.3.0",
     "gulp-util": "^3.0.7",
     "imagemin-jpegtran": "^4.3.2",
+    "ion-rangeslider": "^2.1.4",
     "save": "^2.3.0",
+    "selectize": "^0.12.3",
     "vinyl-ftp": "^0.4.5",
     "vinyl-source-stream": "^1.1.0"
   },

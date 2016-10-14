@@ -1,6 +1,8 @@
 import nav from './components/nav.js';
 import 'Swiper/dist/js/swiper.min';
 import './components/fonts.js';
+import './components/filter.js';
+import './components/slider.js';
 
 $(function(){
 	//nav

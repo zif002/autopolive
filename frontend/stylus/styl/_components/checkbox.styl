@@ -11,8 +11,9 @@ cWhite = #fff
   width: 21px
   height: 21px
   border-radius 5px
-  background #4d6688
+  background #fff
   position: absolute
+  border: 1px solid rgba(dimgray, .6)
   left 0
   top 50%
   margin-top -(@height/2)px
@@ -21,18 +22,21 @@ cWhite = #fff
 .checkbox-input:checked + .checkbox
   &:before
     content '✔';
-    background cFuxia
-    font-size rem(16px)
+    background $green
+    font-size rem(20px)
+    line-height 25px
+    border-color $green
     text-align center
     color cWhite
 .checkbox-toogle
   position: relative
-  width: 40px
-  height: 16px
+  width: 60px
+
+  height: 21px
   border-radius 60px
-  background #4d6688
+  background #000
   display block
-  float right
+  margin-right 5px
   top 4px
   cursor pointer
   transition all .5s ease
@@ -41,10 +45,10 @@ cWhite = #fff
     position absolute
     display: block
     left 0
-    width: 16px
-    height: 16px
+    width: 20px
+    height: 20px
     border-radius 50%
-    background cFuxia
+    background #fff
     transition all .5s ease
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.41)
   &:after
@@ -57,9 +61,9 @@ cWhite = #fff
     border-radius 60px
     transition all .5s ease
 .checkbox-toogle-input:checked+.checkbox-toogle
-  background #4cbdc2
+  background $green
   &:before
-    left 25px
+    left: calc(100% - 20px)
 
 
 

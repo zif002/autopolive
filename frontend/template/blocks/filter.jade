@@ -1,0 +1,38 @@
++b('section').filter
+    form.form-filter
+        +e.btn__brand Выбрать Бренд
+        +e('ul').item.filter-list
+            +e('li').item
+                +e.item-text Мощность
+                +e.block_value
+                    input(id="checkbox1" type="checkbox").checkbox-hide.checkbox-input
+                    label(for="checkbox1").checkbox 20Вт
+            +e('li').item
+                +e.item-text Мощность
+                +e.block_value.--inline
+                    input(id="checkbox2" type="checkbox").checkbox-hide.checkbox-toogle-input
+                    label(for="checkbox2").checkbox-toogle
+                +e('span').text-toggle Кит
+            +e('li').item
+                +e.item-text Высота подъема
+                +e.block_value.--inline
+                input(id="checkbox2" type="text").range-slide
+            +e('li').item
+                select.custom-select
+                    option(selected) C автаматикой
+                    option Погружной
+                    option Скваженный
+            +e('li').item
+                +e.item-text Глубина всасывания
+                span.item--line
+                    em от
+                    input(type="text").item-from
+                span.item--line
+                    em до
+                    input(type="text").item-from
+
+
+
+
+
+

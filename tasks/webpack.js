@@ -47,7 +47,11 @@ module.exports = function(options) {
 		    }))
 		    .pipe(named())
 		    .pipe(webpackstream(optionsWebpack))
-		    .pipe(gulp.dest(options.dst))
+			.on('error', function(error) {
+				plugins.util.log(plugins.util.colors.red(error.message));
+				this.emit('end');
+			})
+			.pipe(gulp.dest(options.dst))
 
 		}
 };
