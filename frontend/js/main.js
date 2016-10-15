@@ -3,6 +3,7 @@ import 'Swiper/dist/js/swiper.min';
 import './components/fonts.js';
 import './components/filter.js';
 import './components/slider.js';
+import './components/render-card';
 
 $(function(){
 	//nav
@@ -30,18 +31,16 @@ $(function(){
 	})
 	//swiper slider
 
-	$('.swiper-container').css({
+	$('.slider').css({
 		'margin-top': $('.nav-fixed').outerHeight()
 	});
-	var swiper = new Swiper('.swiper-container',{
+	var swiper = new Swiper('.slider',{
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
 		autoplay: 3000,
-		speed:1500, 
+		speed:1500,
 	});
-	$('.swiper-container').hover(function(){
-		swiper.stopAutoplay()
-	},function(){
-		swiper.startAutoplay()
-	})
+	$('#content-zoom').css({
+		'padding-top': $('.nav-fixed').outerHeight()
+	});
 })
