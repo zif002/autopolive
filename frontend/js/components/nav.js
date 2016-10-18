@@ -61,6 +61,16 @@ var nav = function(){
 			
 	});
 
+	$('nav .list-category__item').hover(function(e){
+		$('.list-category__drop-down').stop().slideUp()
+		if($('ul',this).length){
+			$('ul',this).stop().slideDown(500);
+			$('ul',this).addClass('active');
+		}
+	},function(){
+		$('ul',this).stop().slideUp(500);
+	})
+
 };
 
 module.exports = nav;
