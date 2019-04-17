@@ -4,3 +4,4 @@ bower_components/
 **/*.zip
 **/*.rar
 .idea/
+package-lock.json

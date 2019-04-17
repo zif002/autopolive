@@ -1,5 +1,5 @@
 import nav from './components/nav.js';
-import 'Swiper/dist/js/swiper.min';
+import Swiper from  'swiper';
 import './components/fonts.js';
 import './components/filter.js';
 import './components/slider.js';
@@ -31,16 +31,25 @@ $(function(){
 	})
 	//swiper slider
 
-	$('.slider').css({
-		'margin-top': $('.nav-fixed').outerHeight()
-	});
+	// $('.slider').css({
+	// 	'margin-top': $('.nav-fixed').outerHeight()
+	// });
 	var swiper = new Swiper('.slider',{
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
 		autoplay: 3000,
 		speed:1500,
+		effect: 'coverflow',
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows : true,
+		},
 	});
-	$('#content-zoom').css({
-		'padding-top': $('.nav-fixed').outerHeight()
-	});
+	
 })

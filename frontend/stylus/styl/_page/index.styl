@@ -1,28 +1,48 @@
 .swiper-container
 	background white
 .slider-title
-	font-size 42px
+	font-size 62px
 	color #000
 	font-weight bold
-	line-height: 50px
+	line-height: normal
 .article-left
 	float: left
 	p
 		width 389px
 		font-size 14px
+.article-slide
+	position absolute
+	top 20%
+	z-index 1
+	left 5%
+	color: #fff
+	max-width 50vw
+.slider-title
+	color: #fff
 .slider-goods
 	.img
-		width 300px
 		position absolute
 		left 0
 		right 0
 		margin: auto
 		top 0
 		bottom 0
+		transform: scale(1.1)
+		transition: 10s ease
+		&:after
+			content: ''
+			position: absolute
+			left 0
+			right 0
+			top 0
+			bottom 0
+			margin: auto
+			background: rgba(0,0,0,.2)
 		
-		img
-			max-width 300px
-			
+	
+.swiper-slide-active
+	.img
+		transform: scale(1)			
 .article-right
 	float: right
 	width 360px
@@ -83,7 +103,9 @@
 			display: block
 			opacity 1
 .slider
-	padding 65px 0
+	padding 0
+	height: calc(100vh - 87px)
+
 	cf()
 .swiper-container-horizontal>.swiper-pagination-bullets
 	text-align right

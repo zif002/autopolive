@@ -16,15 +16,20 @@ module.exports = function(options) {
 		  watch:   isDevelopment,
 		  devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
 		  resolve: {
-		    modulesDirectories: ["node_modules", "bower_components"]
-		  },
+		    modulesDirectories: ["node_modules"]
+			},
+			
 		  module:  {
 		    loaders: [{
 		      test:    /\.js$/,
 		      include: path.join(__dirname, options.loaders),
 		      loader:  'babel?presets[]=es2015',
-		      exclude: [/bower_components/, /node_modules/, /comnponents/]
-		    },
+		      exclude: [/node_modules/]
+				},
+				{
+					test: /\.css$/,
+					use: [ 'style-loader', 'css-loader' ]
+			 	}
 		   ]
 		  },
 		  plugins: [

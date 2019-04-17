@@ -1,4 +1,4 @@
-import 'swiper';
+import Swiper from  'swiper';
 
 
 var mySwiper = new Swiper ('.slide-card', {
