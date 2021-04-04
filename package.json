@@ -20,11 +20,16 @@
     "gulp-util": "^3.0.7",
     "imagemin-jpegtran": "^4.3.2",
     "ion-rangeslider": "^2.1.4",
+    "jeet": "^7.2.0",
+    "jquery": "^3.5.1",
+    "normalize-styl": "^8.0.1",
+    "rupture": "^0.7.1",
     "save": "^2.3.0",
     "selectize": "^0.12.3",
     "swiper": "^4.5.0",
     "vinyl-ftp": "^0.4.5",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^5.17.0"
   },
   "devDependencies": {
     "autoprefixer-stylus": "^0.9.2",
@@ -61,7 +66,7 @@
     "slick-carousel": "^1.5.9",
     "stream-combiner2": "^1.1.1",
     "style-loader": "^0.23.1",
-    "stylus": "^0.54.5",
+    "stylus": "^0.54.8",
     "vinyl-named": "^1.1.0",
     "webfontloader": "^1.6.28",
     "webpack-stream": "^3.1.0"

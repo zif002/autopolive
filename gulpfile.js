@@ -99,7 +99,7 @@ lazyRequireTask('jade', './tasks/jade', {
  * @type {[type]}
  */
 lazyRequireTask('img:sprite', './tasks/sprite', {
-  src: 'frontend/img/sprite/*.png',
+  src: 'frontend/img/sprite/**/*.png',
   dstImg:'tmp/img/',
   dstCss: 'frontend/stylus/styl/',
 });
@@ -109,7 +109,7 @@ lazyRequireTask('img:sprite', './tasks/sprite', {
  * @type {[type]}
  */
 lazyRequireTask('img:image', './tasks/image', {
-  src: 'frontend/img/*.{jpg,png}',
+  src: 'frontend/img/**/*.{jpg,png}',
   dst:'tmp/img/'
 });
 /**
@@ -117,7 +117,7 @@ lazyRequireTask('img:image', './tasks/image', {
  * @type {[type]}
  */
 lazyRequireTask('img:svg', './tasks/svg', {
-  src: 'frontend/img/svg/*.svg',
+  src: 'frontend/img/svg/**/*.svg',
   dstSprite: 'tmp/img/',
   dstStyl: 'frontend/stylus/styl'
 });
@@ -139,7 +139,7 @@ lazyRequireTask('zip', './tasks/zip', {
  * @type {String}
  */
 lazyRequireTask('svg:copy', './tasks/svgCopy', {
-  src: 'frontend/img/*.svg',
+  src: 'frontend/img/**/*.svg',
   dst: 'tmp/img',
 });
 /**
@@ -163,11 +163,11 @@ lazyRequireTask('webpack', './tasks/webpack', {
 
 gulp.task('watch', function(){
 	gulp.watch('frontend/stylus/**/*.styl', gulp.series('stylus'));
-	gulp.watch('frontend/template/**/*.jade', gulp.series('jade'));
-	gulp.watch('frontend/img/sprite/*.png', gulp.series('img:sprite'));
-  gulp.watch('frontend/img/svg/*.svg', gulp.series('img:svg'));
-	gulp.watch('frontend/img/*.svg', gulp.series('svg:copy'));
-	gulp.watch('frontend/img/*.{jpg,png}', gulp.series('img:image'));
+	gulp.watch('frontend/template/*.jade', gulp.series('jade'));
+	gulp.watch('frontend/img/sprite/**/*.png', gulp.series('img:sprite'));
+  gulp.watch('frontend/img/svg/**/*.svg', gulp.series('img:svg'));
+	gulp.watch('frontend/img/**/*.svg', gulp.series('svg:copy'));
+	gulp.watch('frontend/img/**/*.{jpg,png}', gulp.series('img:image'));
 	gulp.watch('frontend/fonts/**/*.*', gulp.series('fonts'));
 });
 gulp.task('init', gulp.series('clean', 'img:image', 'jade', 'stylus', 'webpack', 'fonts'));

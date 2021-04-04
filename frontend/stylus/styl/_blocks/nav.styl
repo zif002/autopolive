@@ -1,88 +1,90 @@
 .nav-fixed
-	background: white
-	position: sticky
-	top 0
-	z-index: 3
-	padding 22px 43px
-	width calc(100% - 87px)
-	transition all .3s ease
-	&>div
-		display inline-block
+  background: #fff
+  position: sticky;
+  display: flex;
+  align-items: center
+  justify-content: space-between
+  top 0
+  z-index: 3
+  padding 22px 43px
+  transition all .3s ease
+  &.nav--scroll
+    padding: 5px 43px
+
 .search
-	input
-		outline none
-		height 25px
-		width 300px
-		border-radius 3px
-		width 0
-		border none
-		border-bottom 1px solid $gray
+  input
+    outline none
+    height 25px
+    width 300px
+    border-radius 3px
+    width 0
+    border none
+    border-bottom 1px solid $gray
 
 .btn-search
-	border: none
-	background none
-	cursor pointer
-	outline none
+  border: none
+  background none
+  cursor pointer
+  outline none
 .burger
-	margin-top 10px
-	width 32px
-	cursor pointer
-	span
-		width auto
-		display block
-		height 3px
-		margin-bottom 5px
-		background black
-		transition all .3s ease
-		position relative
-		&:before
-			position absolute
-			content ''
-			background black
-			width 100%
-			display block
-			height 3px
-			transform rotate(0deg)
-			transition all .3s ease
-			
-		&:nth-child(1)
-			margin-left 10px
-		&:nth-child(2)
-			margin-left 5px
+  margin-top 10px
+  width 32px
+  cursor pointer
+  span
+    width auto
+    display block
+    height 3px
+    margin-bottom 5px
+    background black
+    transition all .3s ease
+    position relative
+    &:before
+      position absolute
+      content ''
+      background black
+      width 100%
+      display block
+      height 3px
+      transform rotate(0deg)
+      transition all .3s ease
+      
+    &:nth-child(1)
+      margin-left 10px
+    &:nth-child(2)
+      margin-left 5px
 
-	cursor pointer
+  cursor pointer
 .burger-close
-		span
-			margin-left 0
-			&:nth-child(2)
-				opacity 0
-			&:nth-child(1),&:nth-child(3)
-				background transparent
-				margin-left 0
-				width 100%
-			&:nth-child(1)
-				&:before
-					bottom -10px
-					transform rotate(-45deg)
-			&:nth-child(3)
-				&:before
-					top -5px
-					transform rotate(45deg)
+    span
+      margin-left 0
+      &:nth-child(2)
+        opacity 0
+      &:nth-child(1),&:nth-child(3)
+        background transparent
+        margin-left 0
+        width 100%
+      &:nth-child(1)
+        &:before
+          bottom -10px
+          transform rotate(-45deg)
+      &:nth-child(3)
+        &:before
+          top -5px
+          transform rotate(45deg)
 .logo
-	position absolute
-	left 0
-	right 0
-	bottom 0
-	top 0
-	margin auto
-	width 156px
-	height 35px
+  display flex
+  flex-direction column
+  text-decoration: none
+  &-text
+    font-size: 16px
+    font-weight: bold
+    text-decoration none
+    color: $blue 
+  
 .right
-	float right
-	padding-top 6px
-	.search,.icon-busket
-		display inline-block
+  float right
+  padding-top 6px
+  .search,.icon-busket
+    display inline-block
 .nav--scroll
-	box-shadow 0 1px 3px 
-body
-	height 800px
+  box-shadow 0 1px 3px 

@@ -1,195 +1,193 @@
 .swiper-container
-	background white
+  background white
 .slider-title
-	font-size 62px
-	color #000
-	font-weight bold
-	line-height: normal
+  font-size 62px
+  color #000
+  font-weight bold
+  line-height: normal
 .article-left
-	float: left
-	p
-		width 389px
-		font-size 14px
+  float: left
+  p
+    width 389px
+    font-size 14px
 .article-slide
-	position absolute
-	top 20%
-	z-index 1
-	left 5%
-	color: #fff
-	max-width 50vw
+  position absolute
+  top 20%
+  z-index 1
+  left 5%
+  color: #fff
+  max-width 50vw
 .slider-title
-	color: #fff
+  color: #fff
 .slider-goods
-	.img
-		position absolute
-		left 0
-		right 0
-		margin: auto
-		top 0
-		bottom 0
-		transform: scale(1.1)
-		transition: 10s ease
-		&:after
-			content: ''
-			position: absolute
-			left 0
-			right 0
-			top 0
-			bottom 0
-			margin: auto
-			background: rgba(0,0,0,.2)
-		
-	
+  .img
+    position absolute
+    left 0
+    right 0
+    margin: auto
+    top 0
+    bottom 0
+    transform: scale(1.1)
+    transition: 10s ease
+    &:after
+      content: ''
+      position: absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      margin: auto
+      background: rgba(0,0,0,.2)
+    
+  
 .swiper-slide-active
-	.img
-		transform: scale(1)			
+  .img
+    transform: scale(1)	
 .article-right
-	float: right
-	width 360px
-	p
-		background-color: #ffffff
-		box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.15)
-		padding 28px 32px
-	.title-description
-		font-size 42px
-		color #f5f5f5
-		position relative
-		left -81px
-		font-weight 900
+  float: right
+  width 360px
+  p
+    background-color: #ffffff
+    box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.15)
+    padding 28px 32px
+  .title-description
+    font-size 42px
+    color #f5f5f5
+    position relative
+    left -81px
+    font-weight 900
 .point
-	border 1px solid #59d9a0
-	border-radius: 50%
-	width 18px
-	height 18px
-	padding 2px
-	position absolute
-	top 0
-	left 0
-	cursor pointer
-	&--1
-		top 10px
-		left 20px
-	&--2
-		top 30%
-		left: 50%
-	&--3
-		top 50%
-		left 78%
-	span
-		background #59d9a0
-		width 18px
-		height 18px
-		border-radius: 50%
-		display: block
-		text-align: center
-		line-height 18px
-		i
-			color #fff
-	article
-		opacity 0
-		top 25px
-		left 0
-		position absolute
-		display: none
-		width 300px
-		height: 200px
-		z-index 9999
-		background #fff
-		padding 10px
-		box-shadow 0 0 10px rgba(0,0,0,.5)
-		transition all .5s ease
-	&:hover
-		article
-			display: block
-			opacity 1
+  border 1px solid #59d9a0
+  border-radius: 50%
+  width 18px
+  height 18px
+  padding 2px
+  position absolute
+  top 0
+  left 0
+  cursor pointer
+  &--1
+    top 10px
+    left 20px
+  &--2
+    top 30%
+    left: 50%
+  &--3
+    top 50%
+    left 78%
+  span
+    background #59d9a0
+    width 18px
+    height 18px
+    border-radius: 50%
+    display: block
+    text-align: center
+    line-height 18px
+    i
+      color #fff
+  article
+    opacity 0
+    top 25px
+    left 0
+    position absolute
+    display: none
+    width 300px
+    height: 200px
+    z-index 9999
+    background #fff
+    padding 10px
+    box-shadow 0 0 10px rgba(0,0,0,.5)
+    transition all .5s ease
+  &:hover
+    article
+      display: block
+      opacity 1
 .slider
-	padding 0
-	height: calc(100vh - 87px)
+  padding 0
+  height: calc(100vh - 87px)
 
-	cf()
+  cf()
 .swiper-container-horizontal>.swiper-pagination-bullets
-	text-align right
+  text-align right
 .swiper-pagination-bullet
-	opacity 1
+  opacity 1
 .swiper-pagination-bullet-active
-	background #59d9a0
+  background #59d9a0
 .b--white
-	background #fff
+  background #fff
 .abs
-	position: absolute
-	z-index 1
-	&--left
-		left -50px
-		top 0
-	&--right
-		right -50px
-		top 0
+  position: absolute
+  z-index 1
+  &--left
+    left -50px
+    top 0
+  &--right
+    right -50px
+    top 0
 .rel
-	position relative
+  position relative
 .section-content
-	
-	padding 50px 0 
-	cf()
-.b--white
-	margin-top 30px
+  
+  padding 50px 0 
+  cf()
 .info
-	marign-top 30px
-	padding 45px 0 45px 106px
-	p
-		text-align left
-.pad-left	
-	padding 25px 40px 45px 82px
+  padding 24px
+  flex: 1;
+  min-height: 100%;
+  p
+    text-align left
 img
-	max-width 100%
+  max-width 100%
 .img-button
-	&:hover
-		.overlay-img
-			height 100%
-	.overlay-img
-		overflow hidden
-		height 0
-		width 100%
-		bottom 0
-		position absolute
-		background: rgba(0,0,0,.7)
-		transition height .3s ease
-		a
-			display block
-			text-align center
-			margin-top 50px
-			color #fff
-			text-decoration none
-			text-transform uppercase
-		.btn
-			top 0
-			bottom 0
-			right 0
-			left 0
-			margin auto
+  font-size: 20px
+  &:hover
+    .overlay-img
+      height 100%
+  .overlay-img
+    overflow hidden
+    height 0
+    width 100%
+    bottom 0
+    position absolute
+    background: rgba(0,0,0,.7)
+    transition height .3s ease
+    a
+      display block
+      text-align center
+      margin-top 50px
+      color #fff
+      text-decoration none
+      text-transform uppercase
+    .btn
+      top 0
+      bottom 0
+      right 0
+      left 0
+      margin auto
 .fixed-height
-	height 265px
-	overflow hidden
+  height 265px
+  overflow hidden
 .b-socials
-	padding 90px 0
-	margin-top 30px
-	img
-		display: block
-		text-align center
-		margin 0 auto
+  padding 90px 0
+  margin-top 30px
+  img
+    display: block
+    text-align center
+    margin 0 auto
 .section-text-about
-	background #fff
-	padding 50px 0
-	text-align center
-	&__title
-		font-family 'Roboto'
-		font-weight 300
-	&__text
-		font-family 'Roboto'
-		letter-spacing 1.3px
-		margin-top 20px
+  background #fff
+  padding 50px 0
+  text-align center
+  &__title
+    font-family 'Roboto'
+    font-weight 300
+  &__text
+    font-family 'Roboto'
+    letter-spacing 1.3px
+    margin-top 20px
 .logo-drop
-	width: 20px
-	height: 30px
+  width: 20px
+  height: 30px
 .pay
-	display: block
-	margin-bottom:31px
+  display: block
+  margin-bottom:31px

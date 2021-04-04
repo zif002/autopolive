@@ -37,9 +37,11 @@ $(function(){
 	var swiper = new Swiper('.slider',{
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
-		autoplay: 3000,
-		speed:1500,
-		effect: 'coverflow',
+		autoplay: {
+      delay: 5000,
+    },
+		speed: 1500,
+		effect: 'fade',
 		grabCursor: true,
 		centeredSlides: true,
 		slidesPerView: 'auto',
