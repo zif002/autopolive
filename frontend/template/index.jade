@@ -9,14 +9,16 @@ html
       include blocks/slider.jade
       section.section-content 
         .wrapper
-          .col-6
+          .col-xs-12.col-6
             .img-button.b--white.rel.fixed-height
               img(src="img/image-site/landscape.jpg", alt="")
-              .overlay-img
-                a(href="") Перейти в портфолио
-                a(href="").btn.btn--big.btn--abs
-                  <i class="fas fa-images "></i>
-          .col-4.rel
+              a(href="")
+                .overlay-img
+                  div.link__wrapper
+                    span.link__name Перейти в портфолио
+                    span.btn
+                      <i class="fas fa-images "></i>
+          .col-xs-12.col-4.rel
             .info.b--white
               .title Ландшафтное проектирование
               p.
@@ -25,7 +27,7 @@ html
                 <i class="fas fa-external-link-alt"></i>
                 a(href="") Перейти в раздел
         .wrapper
-          .col-6.rel.b--white
+          .col-xs-12.col-6.rel.b--white
             .info.b--white.pad-left
               .title Земляные работы
               p.
@@ -33,7 +35,7 @@ html
               .btn.btn--abs
                 <i class="fas fa-external-link-alt"></i>
                 a(href="") Перейти в раздел
-          .col-4
+          .col-xs-12.col-4
             .img-button.b--white.rel.fixed-height
               img(src="img/image-site/excavation.jpg", alt="")
               .overlay-img
@@ -41,14 +43,14 @@ html
                 a(href="").btn.btn--big.btn--abs
                   <i class="fas fa-images "></i>
         .wrapper
-          .col-6
+          .col-xs-12.col-6
             .img-button.b--white.rel.fixed-height
               img(src="img/image-site/drinage.jpg", alt="")
               .overlay-img
                 a(href="") Перейти в портфолио
                 a(href="").btn.btn--big.btn--abs
                   <i class="fas fa-images "></i>
-          .col-4.rel
+          .col-xs-12.col-4.rel
             .info.b--white
               .title Дренаж
               p.
@@ -57,7 +59,7 @@ html
                 <i class="fas fa-external-link-alt"></i>
                 a(href="") Перейти в раздел
         .wrapper
-          .col-6.rel.b--white
+          .col-xs-12.col-6.rel.b--white
             .info.b--white.pad-left
               .title Освещение участков
               p.
@@ -65,7 +67,7 @@ html
               .btn.btn--abs
                 <i class="fas fa-external-link-alt"></i>
                 a(href="") Перейти в раздел
-          .col-4
+          .col-xs-12.col-4
             .img-button.b--white.rel.fixed-height
               img(src="img/image-site/area-lighting.jpg", alt="")
               .overlay-img
@@ -73,14 +75,14 @@ html
                 a(href="").btn.btn--big.btn--abs
                   img(src="img/shopping-bag--btn.svg", alt="")
         .wrapper
-          .col-6
+          .col-xs-12.col-6
             .img-button.b--white.rel.fixed-height
               img(src="img/image-site/autopolive.jpg", alt="")
               .overlay-img
                 a(href="") Распродажа товаров
                 a(href="").btn.btn--big.btn--abs
                   img(src="img/shopping-bag--btn.svg", alt="")
-          .col-4.rel
+          .col-xs-12.col-4.rel
             .info.b--white
               .title Система автополива
               p.
@@ -89,7 +91,7 @@ html
                 <i class="fas fa-external-link-alt"></i>
                 a(href="") Перейти в раздел
         .wrapper
-          .col-6.rel.b--white
+          .col-xs-12.col-6.rel.b--white
             .info.b--white.pad-left
               .title Декоративные водоёмы и каскады
               p.
@@ -97,7 +99,7 @@ html
               .btn.btn--abs
                 <i class="fas fa-external-link-alt"></i>
                 a(href="") Перейти в раздел
-          .col-4
+          .col-xs-12.col-4
             .img-button.b--white.rel.fixed-height
               img(src="img/image-site/cascade.jpg", alt="")
               .overlay-img
@@ -105,14 +107,14 @@ html
                 a(href="").btn.btn--big.btn--abs
                   img(src="img/shopping-bag--btn.svg", alt="")
         .wrapper
-          .col-6
+          .col-xs-12.col-6
             .img-button.b--white.rel.fixed-height
               img(src="img/image-site/landscape2.jpg", alt="")
               .overlay-img
                 a(href="") Распродажа товаров
                 a(href="").btn.btn--big.btn--abs
                   img(src="img/shopping-bag--btn.svg", alt="")
-          .col-4.rel
+          .col-xs-12.col-4.rel
             .info.b--white
               .title Озеленение
               p.
@@ -125,7 +127,7 @@ html
           div
             +e.logo
               svg.logo-drop
-                use(x="0" y="0" xlink:href="#logo-svg" fill="#59d9a0")
+                use(x="0" y="0" xlink:href="#logo-svg" fill="#005cb2")
             +e.text Компания Росток была основана в 2002 году, за 19 лет работы в нашей компании установились стойкие правила выполнения работ, от проектирования до конечного результата под ключ.
               | Росток предоставляет широкий спектр услуг по благоустройству  участков; ландшафтное проектирование,  земляные работы, дренаж , освещение участка,  система авто полива , декоративные водоёмы и каскады, озеленение участков.
               | Специалисты фирмы Росток обладают богатым опытом работы, что отлично сказывается на качестве выполненных работ.  

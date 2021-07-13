@@ -1,0 +1,53 @@
+include ../bemto/bemto.jade
+
+doctype html
+html
+    include blocks/meta.jade
+    include blocks/nav.jade
+    body
+        include blocks/svg.jade
+        #content-zoom
+            +b('section')(itemscope='' itemtype='http://schema.org/ImageGallery').gallery
+                figure(itemprop='associatedMedia' itemscope='' itemtype='http://schema.org/ImageObject').gallery-item
+                  a(href='img/dog.jpg' itemprop='contentUrl')
+                    img(src='img/dog.jpg' itemprop='thumbnail' alt='Image description')
+                  figcaption(itemprop='caption description') Image caption
+                figure(itemprop='associatedMedia' itemscope='' itemtype='http://schema.org/ImageObject').gallery-item
+                  a(href='img/1.jpg' itemprop='contentUrl')
+                    img(src='img/1.jpg' itemprop='thumbnail' alt='Image description')
+                  figcaption(itemprop='caption description') Image caption
+                figure(itemprop='associatedMedia' itemscope='' itemtype='http://schema.org/ImageObject').gallery-item
+                  a(href='img/dog.jpg' itemprop='contentUrl')
+                    img(src='img/dog.jpg' itemprop='thumbnail' alt='Image description')
+                  figcaption(itemprop='caption description') Image caption
+            +b.section-text-about
+                .wrapper
+                    +e.logo
+                        svg.logo-drop
+                            use(x="0" y="0" xlink:href="#logo-svg" fill="#59d9a0")
+                    +e.title ДЛЯ ЧЕГО НУЖНЫ ЭЛЕКТРИЧЕСКИЕ САДОВЫЕ НАСОСЫ И КАК ОН УЛУЧШАЮТ ВАШ ГАЗОН
+                    +e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ex eu mi tempor lobortis ut a lorem. Aenean mauris libero, vulputate id aliquam ultricies, ullamcorper et urna. Ut ac lacus orci. Fusce rutrum orci id vulputate sollicitudin. Quisque id eros luctus, rhoncus augue ac, porta ex.
+            footer
+                .wrapper
+                    .col-3
+                        +b('ul').footer-list
+                            +e('li').item
+                                a(href="") О НАС
+                            +e('li').item
+                                a(href="") ДОСТАВКА ТОВАРОВ
+                            +e('li').item
+                                a(href="") КАК КУПИТЬ?
+                            +e('li').item
+                                a(href="") ВОЗВРАТ ТОВАРОВ
+
+                    .col-4
+                        span.mini-title  ПРИНИМАЕМ
+                        span.icon.icon-walet.pay оплату наличными
+                        span.icon.icon-walet.pay оплату банковскими картами
+                    .col-3
+                        span.mini-title  КОНТАКТЫ
+                        a.phone(href="tel:123-45-67") 8 812 123-45-67
+                        a.phone(href="tel:123-45-67") 8 812 123-45-67
+        .overlay
+        include blocks/footer.jade  
+        include blocks/photoswipe.jade

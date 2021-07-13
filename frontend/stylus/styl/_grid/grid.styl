@@ -3,3 +3,11 @@ for num in (1..10)
     column(num/10)
 .col-4
 	column(4/10)
+
+
+@media(max-width: 540px)
+  for num in (1..12)
+    .col-xs-{num}
+      column(num/12)
+      margin: 0
+

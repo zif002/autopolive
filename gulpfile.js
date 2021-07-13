@@ -1,12 +1,12 @@
 'use strict';
 
-const gulp     = require('gulp'),
+var gulp     = require('gulp'),
       path     = require('path'),
       ftp      = require('vinyl-ftp'),
       util     = require('gulp-util'),
       $        = require('gulp-load-plugins')();
 
-const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 
 /**
@@ -20,7 +20,7 @@ function lazyRequireTask(taskName, path, options){
 	options = options || {};
 	options.taskName = taskName;
 	gulp.task(taskName, function(callback){
-		let task = require(path).call(this, options);
+		var task = require(path).call(this, options);
 		return task(callback);
 	})
 
@@ -172,5 +172,5 @@ gulp.task('watch', function(){
 });
 gulp.task('init', gulp.series('clean', 'img:image', 'jade', 'stylus', 'webpack', 'fonts'));
 gulp.task('dev',gulp.series('clean', 'fonts', 'svg:copy', 'img:image', 'img:sprite', 'img:svg', 'stylus', 'jade', gulp.parallel( 'webpack','watch', 'serve')));
-gulp.task('build' , gulp.series('clean', 'img:sprite', 'img:image', 'img:svg', 'stylus','jade', 'webpack'));
+gulp.task('build' , gulp.series('img:sprite', 'img:image', 'img:svg', 'stylus','jade', 'webpack'));
 

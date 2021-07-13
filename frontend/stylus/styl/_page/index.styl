@@ -5,6 +5,10 @@
   color #000
   font-weight bold
   line-height: normal
+  @media(max-width: 768px)
+    font-size 40px
+  @media(max-width: 768px)
+    font-size 24px
 .article-left
   float: left
   p
@@ -17,6 +21,8 @@
   left 5%
   color: #fff
   max-width 50vw
+  @media(max-width 540px)
+   max-width 100%
 .slider-title
   color: #fff
 .slider-goods
@@ -38,6 +44,8 @@
       bottom 0
       margin: auto
       background: rgba(0,0,0,.2)
+    img
+      width: 100%
     
   
 .swiper-slide-active
@@ -105,8 +113,11 @@
 .slider
   padding 0
   height: calc(100vh - 87px)
-
   cf()
+  @media(max-width: 1024px)
+    height: 50vh
+  @media(max-width: 768px)
+    height: 30vh
 .swiper-container-horizontal>.swiper-pagination-bullets
   text-align right
 .swiper-pagination-bullet
@@ -145,12 +156,22 @@ img
       height 100%
   .overlay-img
     overflow hidden
+    display flex
+    align-items: center
+    justify-content: center
     height 0
     width 100%
     bottom 0
     position absolute
     background: rgba(0,0,0,.7)
     transition height .3s ease
+    .link__wrapper 
+      display flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+    .link__name
+      color: #fff
     a
       display block
       text-align center

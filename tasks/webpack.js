@@ -1,20 +1,29 @@
 "use strict";
-const $ = require("gulp-load-plugins")(),
+var $ = require("gulp-load-plugins")(),
   webpackstream = require("webpack-stream"),
   webpack = webpackstream.webpack,
   named = require("vinyl-named"),
   path = require("path"),
   gulp = require("gulp");
-
-const isDevelopment =
+  var isDevelopment =
   !process.env.NODE_ENV || process.env.NODE_ENV == "development";
-
 module.exports = function (options) {
+  var plugins = [
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      _: "loadash",
+      "window.jQuery": "jquery",
+    }),
+  ]
   return function () {
+
     //console.log(isDevelopment);
-    let optionsWebpack = {
+    var optionsWebpack = {
       watch: isDevelopment,
-      devtool: isDevelopment ? "cheap-module-inline-source-map" : null,
+      mode: process.env.NODE_ENV,
+      devtool: isDevelopment ? "cheap-module-inline-source-map" : false,
       resolve: {
         modulesDirectories: ["node_modules"],
       },
@@ -33,14 +42,9 @@ module.exports = function (options) {
           },
         ],
       },
-      plugins: [
-        new webpack.NoErrorsPlugin(),
-        new webpack.ProvidePlugin({
-          $: "jquery",
-          jQuery: "jquery",
-          _: "loadash",
-          "window.jQuery": "jquery",
-        }),
+      plugins: isDevelopment ? plugins : [
+        ...plugins,
+        new webpack.optimize.UglifyJsPlugin(),
       ],
     };
 

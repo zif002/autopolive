@@ -1,8 +1,8 @@
 'use strict';
 
-const	del = require('del'),
+var	del = require('del'),
 		gulpif = require('gulp-if');
-const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 module.exports = function(options) {
 
